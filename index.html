@@ -7,7 +7,6 @@
     <title>Kel</title>
     <link type="text/css" href="/codewkel/assets/output.css" rel="stylesheet" media="all">
     <link rel="icon" type="image/x-icon" href="img/318844924_844109533317810_6129070367653286325_n.jpg">
-
     
     <script>
         // It's best to inline this in `head` to avoid FOUC (flash of unstyled content) when changing pages or themes
@@ -21,8 +20,8 @@
           document.documentElement.classList.remove('dark');
         }
       </script>
+      <script src="/codewkel/js/app.js" defer=""></script>
       
-    <script src="/codewkel/js/app.js" defer=""></script>
 <!--
     <script href="js/main.js" defer=""></script>
     <script href="js/index.js" defer=""></script>
@@ -75,96 +74,98 @@
                                 x-cloak
                                 @click.away="show = false" x-transition:enter="transition ease-out duration-100"
                                 x-transition:enter-start="transform opacity-0 scale-95">
-                                <div class="absolute left-[-50%] z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4">
-                                  <div class="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white text-sm leading-6 shadow-lg ring-1 ring-zinc-900/5 dark:bg-zinc-900 dark:ring-white/10">
-                                    <div class="p-4">
-                                      <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50">
-                                        <!-- <div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                                          <svg class="h-6 w-6 text-gray-600 group-hover:text-indigo-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
-                                          </svg>
-                                        </div> -->
-                                        <div>
-                                          <a href="#" class="font-semibold text-gray-900 dark:text-zinc-400">
-                                            About
-                                            <span class="absolute inset-0"></span>
-                                          </a>
-                                          <!-- <p class="mt-1 text-gray-600">Get a better understanding of your traffic</p> -->
+                                <div class="flex justify-center items-center w-screen">
+                                    <div class="fixed left-[-50%] z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4">
+                                        <div class="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white text-sm leading-6 shadow-lg ring-1 ring-zinc-900/5 dark:bg-zinc-900 dark:ring-white/10">
+                                          <div class="p-4">
+                                            <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50">
+                                              <!-- <div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                                <svg class="h-6 w-6 text-gray-600 group-hover:text-indigo-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                                  <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
+                                                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
+                                                </svg>
+                                              </div> -->
+                                              <div>
+                                                <a href="#" class="font-semibold text-gray-900 dark:text-zinc-400">
+                                                  About
+                                                  <span class="absolute inset-0"></span>
+                                                </a>
+                                                <!-- <p class="mt-1 text-gray-600">Get a better understanding of your traffic</p> -->
+                                              </div>
+                                            </div>
+                                            <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50">
+                                              <!-- <div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                                <svg class="h-6 w-6 text-gray-600 group-hover:text-indigo-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zM12 2.25V4.5m5.834.166l-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243l-1.59-1.59" />
+                                                </svg>
+                                              </div> -->
+                                              <div>
+                                                <a href="#" class="font-semibold text-gray-900 dark:text-zinc-400">
+                                                  Articles
+                                                  <span class="absolute inset-0"></span>
+                                                </a>
+                                                <!-- <p class="mt-1 text-gray-600">Speak directly to your customers</p> -->
+                                              </div>
+                                            </div>
+                                            <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50">
+                                              <!-- <div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                                <svg class="h-6 w-6 text-gray-600 group-hover:text-indigo-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                                  <path stroke-linecap="round" stroke-linejoin="round" d="M7.864 4.243A7.5 7.5 0 0119.5 10.5c0 2.92-.556 5.709-1.568 8.268M5.742 6.364A7.465 7.465 0 004.5 10.5a7.464 7.464 0 01-1.15 3.993m1.989 3.559A11.209 11.209 0 008.25 10.5a3.75 3.75 0 117.5 0c0 .527-.021 1.049-.064 1.565M12 10.5a14.94 14.94 0 01-3.6 9.75m6.633-4.596a18.666 18.666 0 01-2.485 5.33" />
+                                                </svg>
+                                              </div> -->
+                                              <div>
+                                                <a href="#" class="font-semibold text-gray-900 dark:text-zinc-400">
+                                                  Projects
+                                                  <span class="absolute inset-0"></span>
+                                                </a>
+                                                <!-- <p class="mt-1 text-gray-600">Your customers&#039; data will be safe and secure</p> -->
+                                              </div>
+                                            </div>
+                                            <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50">
+                                              <!-- <div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                                <svg class="h-6 w-6 text-gray-600 group-hover:text-indigo-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 002.25-2.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v2.25A2.25 2.25 0 006 10.5zm0 9.75h2.25A2.25 2.25 0 0010.5 18v-2.25a2.25 2.25 0 00-2.25-2.25H6a2.25 2.25 0 00-2.25 2.25V18A2.25 2.25 0 006 20.25zm9.75-9.75H18a2.25 2.25 0 002.25-2.25V6A2.25 2.25 0 0018 3.75h-2.25A2.25 2.25 0 0013.5 6v2.25a2.25 2.25 0 002.25 2.25z" />
+                                                </svg>
+                                              </div> -->
+                                              <div>
+                                                <a href="#" class="font-semibold text-gray-900 dark:text-zinc-400">
+                                                  Speaking
+                                                  <span class="absolute inset-0"></span>
+                                                </a>
+                                                <!-- <p class="mt-1 text-gray-600">Connect with third-party tools</p> -->
+                                              </div>
+                                            </div>
+                                            <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50">
+                                              <!-- <div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                                                <svg class="h-6 w-6 text-gray-600 group-hover:text-indigo-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                                  <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+                                                </svg>
+                                              </div> -->
+                                              <div>
+                                                <a href="#" class="font-semibold text-gray-900 dark:text-zinc-400">
+                                                  Uses
+                                                  <span class="absolute inset-0"></span>
+                                                </a>
+                                                <!-- <p class="mt-1 text-gray-600">Build strategic funnels that will convert</p> -->
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <!-- <div class="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
+                                            <a href="#" class="flex items-center justify-center gap-x-2.5 p-3 font-semibold text-gray-900 hover:bg-gray-100">
+                                              <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                <path fill-rule="evenodd" d="M2 10a8 8 0 1116 0 8 8 0 01-16 0zm6.39-2.908a.75.75 0 01.766.027l3.5 2.25a.75.75 0 010 1.262l-3.5 2.25A.75.75 0 018 12.25v-4.5a.75.75 0 01.39-.658z" clip-rule="evenodd" />
+                                              </svg>
+                                              Watch demo
+                                            </a>
+                                            <a href="#" class="flex items-center justify-center gap-x-2.5 p-3 font-semibold text-gray-900 hover:bg-gray-100">
+                                              <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                <path fill-rule="evenodd" d="M2 3.5A1.5 1.5 0 013.5 2h1.148a1.5 1.5 0 011.465 1.175l.716 3.223a1.5 1.5 0 01-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 006.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 011.767-1.052l3.223.716A1.5 1.5 0 0118 15.352V16.5a1.5 1.5 0 01-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 012.43 8.326 13.019 13.019 0 012 5V3.5z" clip-rule="evenodd" />
+                                              </svg>
+                                              Contact sales
+                                            </a>
+                                          </div> -->
                                         </div>
                                       </div>
-                                      <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50">
-                                        <!-- <div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                                          <svg class="h-6 w-6 text-gray-600 group-hover:text-indigo-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zM12 2.25V4.5m5.834.166l-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243l-1.59-1.59" />
-                                          </svg>
-                                        </div> -->
-                                        <div>
-                                          <a href="#" class="font-semibold text-gray-900 dark:text-zinc-400">
-                                            Articles
-                                            <span class="absolute inset-0"></span>
-                                          </a>
-                                          <!-- <p class="mt-1 text-gray-600">Speak directly to your customers</p> -->
-                                        </div>
-                                      </div>
-                                      <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50">
-                                        <!-- <div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                                          <svg class="h-6 w-6 text-gray-600 group-hover:text-indigo-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M7.864 4.243A7.5 7.5 0 0119.5 10.5c0 2.92-.556 5.709-1.568 8.268M5.742 6.364A7.465 7.465 0 004.5 10.5a7.464 7.464 0 01-1.15 3.993m1.989 3.559A11.209 11.209 0 008.25 10.5a3.75 3.75 0 117.5 0c0 .527-.021 1.049-.064 1.565M12 10.5a14.94 14.94 0 01-3.6 9.75m6.633-4.596a18.666 18.666 0 01-2.485 5.33" />
-                                          </svg>
-                                        </div> -->
-                                        <div>
-                                          <a href="#" class="font-semibold text-gray-900 dark:text-zinc-400">
-                                            Projects
-                                            <span class="absolute inset-0"></span>
-                                          </a>
-                                          <!-- <p class="mt-1 text-gray-600">Your customers&#039; data will be safe and secure</p> -->
-                                        </div>
-                                      </div>
-                                      <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50">
-                                        <!-- <div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                                          <svg class="h-6 w-6 text-gray-600 group-hover:text-indigo-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 002.25-2.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v2.25A2.25 2.25 0 006 10.5zm0 9.75h2.25A2.25 2.25 0 0010.5 18v-2.25a2.25 2.25 0 00-2.25-2.25H6a2.25 2.25 0 00-2.25 2.25V18A2.25 2.25 0 006 20.25zm9.75-9.75H18a2.25 2.25 0 002.25-2.25V6A2.25 2.25 0 0018 3.75h-2.25A2.25 2.25 0 0013.5 6v2.25a2.25 2.25 0 002.25 2.25z" />
-                                          </svg>
-                                        </div> -->
-                                        <div>
-                                          <a href="#" class="font-semibold text-gray-900 dark:text-zinc-400">
-                                            Speaking
-                                            <span class="absolute inset-0"></span>
-                                          </a>
-                                          <!-- <p class="mt-1 text-gray-600">Connect with third-party tools</p> -->
-                                        </div>
-                                      </div>
-                                      <div class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50">
-                                        <!-- <div class="mt-1 flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                                          <svg class="h-6 w-6 text-gray-600 group-hover:text-indigo-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
-                                          </svg>
-                                        </div> -->
-                                        <div>
-                                          <a href="#" class="font-semibold text-gray-900 dark:text-zinc-400">
-                                            Uses
-                                            <span class="absolute inset-0"></span>
-                                          </a>
-                                          <!-- <p class="mt-1 text-gray-600">Build strategic funnels that will convert</p> -->
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <!-- <div class="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
-                                      <a href="#" class="flex items-center justify-center gap-x-2.5 p-3 font-semibold text-gray-900 hover:bg-gray-100">
-                                        <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                          <path fill-rule="evenodd" d="M2 10a8 8 0 1116 0 8 8 0 01-16 0zm6.39-2.908a.75.75 0 01.766.027l3.5 2.25a.75.75 0 010 1.262l-3.5 2.25A.75.75 0 018 12.25v-4.5a.75.75 0 01.39-.658z" clip-rule="evenodd" />
-                                        </svg>
-                                        Watch demo
-                                      </a>
-                                      <a href="#" class="flex items-center justify-center gap-x-2.5 p-3 font-semibold text-gray-900 hover:bg-gray-100">
-                                        <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                          <path fill-rule="evenodd" d="M2 3.5A1.5 1.5 0 013.5 2h1.148a1.5 1.5 0 011.465 1.175l.716 3.223a1.5 1.5 0 01-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 006.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 011.767-1.052l3.223.716A1.5 1.5 0 0118 15.352V16.5a1.5 1.5 0 01-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 012.43 8.326 13.019 13.019 0 012 5V3.5z" clip-rule="evenodd" />
-                                        </svg>
-                                        Contact sales
-                                      </a>
-                                    </div> -->
-                                  </div>
                                 </div>
                             </div>
                         </div>
@@ -259,16 +260,16 @@
 <div class="mt-16 sm:mt-20">
     <div class="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
         <div class="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl rotate-2">
-                <img alt="" sizes="(min-width: 640px) 18rem, 11rem" srcset="" src="img/318844924_844109533317810_6129070367653286325_n.jpg" width="3744" height="5616" decoding="async" data-nimg="1" class="absolute inset-0 h-full w-full object-cover" loading="lazy" style="color: transparent;">
+                <img alt="" sizes="(min-width: 640px) 18rem, 11rem" srcset="" src="img/63fbd08ddcf513190e3f9b0b_Thumb20Large-p-2000.webp" width="3744" height="5616" decoding="async" data-nimg="1" class="absolute inset-0 h-full w-full object-cover" loading="lazy" style="color: transparent;">
             </div>
             <div class="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl -rotate-2">
-                <img alt="" sizes="(min-width: 640px) 18rem, 11rem" srcset="" src="img/323809229_827123315048456_2581872026299043527_n.jpg" width="3936" height="2624" decoding="async" data-nimg="1" class="absolute inset-0 h-full w-full object-cover" loading="lazy" style="color: transparent;">
+                <img alt="" sizes="(min-width: 640px) 18rem, 11rem" srcset="" src="img/63fbd08ddcf5135da03f9afa_Image 2.webp" width="3936" height="2624" decoding="async" data-nimg="1" class="absolute inset-0 h-full w-full object-cover" loading="lazy" style="color: transparent;">
             </div>
             <div class="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl rotate-2">
-                <img alt="" sizes="(min-width: 640px) 18rem, 11rem" srcset="" src="img/asdasd.jpg" width="5760" height="3840" decoding="async" data-nimg="1" class="absolute inset-0 h-full w-full object-cover" loading="lazy" style="color: transparent;">
+                <img alt="" sizes="(min-width: 640px) 18rem, 11rem" srcset="" src="img/eberhard-grossgasteiger-y2azHvupCVo-unsplash.jpg" width="5760" height="3840" decoding="async" data-nimg="1" class="absolute inset-0 h-full w-full object-cover" loading="lazy" style="color: transparent;">
             </div>
             <div class="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl rotate-2">
-                <img alt="" sizes="(min-width: 640px) 18rem, 11rem" srcset="" src="img/318880035_1212226796362368_4175651666867056805_n.jpg" width="4240" height="2384" decoding="async" data-nimg="1" class="absolute inset-0 h-full w-full object-cover" loading="lazy" style="color: transparent;">
+                <img alt="" sizes="(min-width: 640px) 18rem, 11rem" srcset="" src="img/63fbd08ddcf5136f0d3f9af8_Image 3.webp" width="4240" height="2384" decoding="async" data-nimg="1" class="absolute inset-0 h-full w-full object-cover" loading="lazy" style="color: transparent;">
             </div>
         </div>
     </div>
@@ -285,7 +286,7 @@
                                     <a href="/articles/crafting-a-design-system-for-a-multiplanetary-future">
                                         <span class="absolute -inset-y-6 -inset-x-4 z-20 sm:-inset-x-6 sm:rounded-2xl">
                                         </span>
-                                        <span class="relative z-10">Lorem ipsum dolor sit amet, consectetuer</span>
+                                        <span class="relative z-10">The Power of Responsive Web Design</span>
                                     </a>
                                 </h2>
                                 <time class="relative z-10 order-first mb-3 flex items-center text-sm text-zinc-400 dark:text-zinc-500 pl-3.5" datetime="2022-09-05">
@@ -294,12 +295,7 @@
                                         </span>
                                     </span>September 5, 2022</time>
                                     <p class="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">Sed egestas, 
-                                        ante et vulputate volutpat, 
-                                        eros pede semper est, vitae 
-                                        luctus metus libero eu augue. 
-                                        Morbi purus libero, faucibus 
-                                        adipiscing, commodo quis, gravida id, 
-                                        est. Sed lectus.</p>
+                                        In this blog post, I'll delve into the importance of responsive web design and explain how it can enhance user experience across various devices. Learn about key techniques and best practices for creating websites that adapt seamlessly to different screen sizes.</p>
                                         <div aria-hidden="true" class="relative z-10 mt-4 flex items-center text-sm font-medium text-teal-500">Read article
                                             <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" class="ml-1 h-4 w-4 stroke-current">
                                                 <path d="M6.75 5.75 9.25 8l-2.5 2.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -314,7 +310,7 @@
                                             <a href="/articles/introducing-animaginary">
                                                 <span class="absolute -inset-y-6 -inset-x-4 z-20 sm:-inset-x-6 sm:rounded-2xl">
                                                 </span>
-                                                <span class="relative z-10">Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci.</span>
+                                                <span class="relative z-10">Mastering CSS: Tips and Tricks for Web Developers</span>
                                             </a>
                                         </h2>
                                         <time class="relative z-10 order-first mb-3 flex items-center text-sm text-zinc-400 dark:text-zinc-500 pl-3.5" datetime="2022-09-02">
@@ -322,11 +318,7 @@
                                                 <span class="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500">
                                                 </span>
                                             </span>September 2, 2022</time>
-                                            <p class="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">Morbi interdum mollis 
-                                                sapien. Sed ac risus. Phasellus lacinia, 
-                                                magna a ullamcorper laoreet, lectus arcu 
-                                                pulvinar risus, vitae facilisis libero dolor 
-                                                a purus. Sed vel lacus.</p>
+                                            <p class="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">CSS is the backbone of web development. This blog will explore advanced CSS techniques, hacks, and best practices to help you take your styling skills to the next level. Discover how to create stunning designs and solve common CSS challenges.</p>
                                             <div aria-hidden="true" class="relative z-10 mt-4 flex items-center text-sm font-medium text-teal-500">Read article
                                                 <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" class="ml-1 h-4 w-4 stroke-current"><path d="M6.75 5.75 9.25 8l-2.5 2.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                                                 </path>
@@ -340,7 +332,7 @@
                                             <a href="/articles/rewriting-the-cosmos-kernel-in-rust">
                                                 <span class="absolute -inset-y-6 -inset-x-4 z-20 sm:-inset-x-6 sm:rounded-2xl">
                                             </span>
-                                            <span class="relative z-10">Praesent dapibus, neque id cursus faucibus.</span>
+                                            <span class="relative z-10">Demystifying JavaScript Frameworks: A Comparison Guide</span>
                                         </a>
                                     </h2>
                                     <time class="relative z-10 order-first mb-3 flex items-center text-sm text-zinc-400 dark:text-zinc-500 pl-3.5" datetime="2022-07-14">
@@ -348,11 +340,7 @@
                                             <span class="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500">
                                             </span>
                                         </span>July 14, 2022</time>
-                                        <p class="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">Ut convallis, 
-                                            sem sit amet interdum consectetuer, 
-                                            odio augue aliquam leo, nec dapibus
-                                             tortor nibh sed augue. Integer eu 
-                                             magna sit amet metus fermentum posuere.</p>
+                                        <p class="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">With so many JavaScript frameworks available, choosing the right one for your project can be daunting. This blog post will provide an in-depth comparison of popular JavaScript frameworks like React, Angular, and Vue.js. You'll gain insights to help you make informed decisions for your web development projects.</p>
                                             <div aria-hidden="true" class="relative z-10 mt-4 flex items-center text-sm font-medium text-teal-500">Read article
                                                 <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" class="ml-1 h-4 w-4 stroke-current">
                                                 <path d="M6.75 5.75 9.25 8l-2.5 2.25" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -392,11 +380,28 @@
                                             <ol class="mt-6 space-y-4">
                                                 <li class="flex gap-4">
                                                     <div class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+                                                        <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><rect fill="#6fda44" height="512" rx="15%" width="512"/><path d="m357.2 296.9c-17 0-33-7.2-47.4-18.9l3.5-16.6.1-.6c3.2-17.6 13.1-47.2 43.8-47.2 23 0 41.7 18.7 41.7 41.7s-18.7 41.6-41.7 41.6zm0-125.5c-39.2 0-69.5 25.4-81.9 67.3-18.8-28.3-33.1-62.2-41.4-90.8h-42.2v109.7c0 21.7-17.6 39.3-39.3 39.3s-39.3-17.6-39.3-39.3v-109.8h-42.1v109.7c0 44.9 36.5 81.8 81.4 81.8s81.4-36.9 81.4-81.8v-18.4c8.2 17.1 18.2 34.4 30.4 49.6l-25.8 121.4h43.1l18.7-88c16.4 10.5 35.2 17.1 56.8 17.1 46.2 0 83.8-37.8 83.8-84.1.1-46.1-37.4-83.7-83.6-83.7" fill="#fff"/></svg>
+                                                        <!-- <img alt="" class="rounded-full" src="img/TVS.png" width="32" height="32" decoding="async" data-nimg="1" class="h-7 w-7" loading="lazy" style="color: transparent;"> -->
+                                                    </div>
+                                                    <dl class="flex flex-auto flex-wrap gap-x-2">
+                                                        <dt class="sr-only">Company</dt>
+                                                        <dd class="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">Freelancer</dd>
+                                                        <dt class="sr-only">Role</dt>
+                                                        <dd class="text-xs text-zinc-500 dark:text-zinc-400">Wordpress Front-End Developer</dd>
+                                                        <dt class="sr-only">Date</dt>
+                                                        <dd class="ml-auto text-xs text-zinc-400 dark:text-zinc-500" aria-label="2019 until Present">
+                                                            <time datetime="2022">2023</time> <span aria-hidden="true">—</span>
+                                                            <time datetime="2023">Present</time>
+                                                        </dd>
+                                                    </dl>
+                                                </li>
+                                                <li class="flex gap-4">
+                                                    <div class="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
                                                         <img alt="" class="rounded-full" src="img/TVS.png" width="32" height="32" decoding="async" data-nimg="1" class="h-7 w-7" loading="lazy" style="color: transparent;">
                                                     </div>
                                                     <dl class="flex flex-auto flex-wrap gap-x-2">
                                                         <dt class="sr-only">Company</dt>
-                                                        <dd class="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">Tugas Virtual Solutions</dd>
+                                                        <dd class="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">Tugas Virtual Solutions Agency</dd>
                                                         <dt class="sr-only">Role</dt>
                                                         <dd class="text-xs text-zinc-500 dark:text-zinc-400">Front-End Web Developer</dd>
                                                         <dt class="sr-only">Date</dt>
@@ -500,7 +505,6 @@
 <next-route-announcer>
     <p aria-live="assertive" id="__next-route-announcer__" role="alert" style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px; white-space: nowrap; overflow-wrap: normal;">Michael Namocot - Tambay, Drug lord, and astronaut</p>
 </next-route-announcer>
-    <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </body>
 </html>
